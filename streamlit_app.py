@@ -94,7 +94,7 @@ st.markdown("""
 <style>
 /* Main container styling */
 .main {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
