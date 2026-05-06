@@ -85,7 +85,7 @@ def send_real_email(to_email, subject, body):
 def get_real_news(category, country):
     """Fetch real-time news from NewsAPI"""
     # Free API key: https://newsapi.org/register
-    API_KEY = "YOUR_NEWS_API_KEY"  # Replace after signing up
+    API_KEY = "03f7c2c09a7b45e1b25bc25bf4377fae"  # Replace after signing up
     
     categories = {
         "Technology": "technology",
