@@ -35,7 +35,7 @@ warnings.filterwarnings('ignore')
 
 ADZUNA_APP_ID = "71a53b73"
 ADZUNA_API_KEY = "09e784ffc0f20280441bcef9bb73ad16"
-NEWS_API_KEY = "03f7c2c09a7b45e1b25bc25bf4377fae"
+
 
 # ============================================
 # PAGE CONFIGURATION
