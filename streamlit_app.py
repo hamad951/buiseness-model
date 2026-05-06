@@ -2,7 +2,7 @@
 BUSINESS HELPER - COMPLETE PROFESSIONAL SYSTEM
 Single File Application | Admin Controlled | Auto Email | Job Search | B2B Leads
 Author: Business Helper Team
-Version: 1.0.0
+Version: 2.0.0
 """
 
 # ============================================
@@ -120,15 +120,6 @@ st.markdown("""
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
     
-    /* Admin card styling */
-    .admin-card {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        border-radius: 15px;
-        padding: 20px;
-        color: white;
-        margin: 10px 0;
-    }
-    
     /* Chat styling */
     .chat-user {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -160,16 +151,6 @@ st.markdown("""
         color: white;
         border-radius: 10px;
         margin-top: 50px;
-    }
-    
-    /* Success badge */
-    .success-badge {
-        background: #4CAF50;
-        color: white;
-        padding: 5px 10px;
-        border-radius: 20px;
-        font-size: 12px;
-        display: inline-block;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -619,12 +600,31 @@ def show_admin_dashboard():
     col1, col2, col3, col4 = st.columns(4)
     
     with col1:
-        st.markdown(f"""
-        <div class='metric-container'>
-            <h3>👥</h3>
-            <h2>{stats['total_users']}</h2>
-            <p>Total Users</p>
-        </div>
-        """, unsafe_allow_html=True)
+        st.markdown(
+            f"""
+            <div class='metric-container'>
+                <h3>👥</h3>
+                <h2>{stats['total_users']}</h2>
+                <p>Total Users</p>
+            </div>
+            """, 
+            unsafe_allow_html=True
+        )
     
     with col2:
+        st.markdown(
+            f"""
+            <div class='metric-container'>
+                <h3>⭐</h3>
+                <h2>{stats['pro_users']}</h2>
+                <p>Pro Users</p>
+            </div>
+            """, 
+            unsafe_allow_html=True
+        )
+    
+    with col3:
+        st.markdown(
+            f"""
+            <div class='metric-container'>
+                <
