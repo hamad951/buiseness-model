@@ -23,8 +23,8 @@ def fetch_real_jobs(role, country):
     """Get real jobs from Adzuna API (free signup at adzuna.com)"""
     # Free tier: 500 requests/month
     # Sign up at https://developer.adzuna.com/ to get APP_ID and API_KEY
-    APP_ID = "YOUR_APP_ID"  # Replace after signing up
-    API_KEY = "YOUR_API_KEY"  # Replace after signing up
+    APP_ID = "71a53b73"  # Replace after signing up
+    API_KEY = "09e784ffc0f20280441bcef9bb73ad16"  # Replace after signing up
     
     country_codes = {
         "USA": "us", "UK": "gb", "Canada": "ca", "India": "in", 
