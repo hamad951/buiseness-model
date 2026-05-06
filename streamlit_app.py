@@ -37,10 +37,10 @@ warnings.filterwarnings('ignore')
 
 ```python
 """
-BUSINESS HELPER - COMPLETE PROFESSIONAL SYSTEM
-Single File Application | Admin Controlled | Auto Email | Job Search | B2B Leads
-Author: Business Helper Team
-Version: 2.0.0
+#BUSINESS HELPER - COMPLETE PROFESSIONAL SYSTEM
+#Single File Application | Admin Controlled | Auto Email | Job Search | B2B Leads
+#Author: Business Helper Team
+#Version: 2.0.0
 """
 
 # ============================================
