@@ -428,19 +428,18 @@ class EmailAutomator:
     
     def __init__(self):
         """Initialize email automator"""
-        # Professional email templates
         self.templates = {
             "cold_outreach": """
 Subject: Grow Your Business with AI Solutions - {company_name}
 
 Dear {contact_name},
 
-I hope this message finds you well. I'm reaching out because we've developed an AI-powered solution that can help {company_name} increase leads by 300% and automate customer outreach.
+I hope this message finds you well. I'm reaching out because we've developed an AI-powered solution that can help {company_name} increase leads by 300 percent and automate customer outreach.
 
 Our platform has helped 5,000+ businesses:
-• Generate 10,000+ qualified leads monthly
-• Automate email campaigns with 45% open rates
-• Save 20+ hours weekly on manual tasks
+- Generate 10,000+ qualified leads monthly
+- Automate email campaigns with 45 percent open rates
+- Save 20+ hours weekly on manual tasks
 
 Would you be open to a 15-minute demo this week?
 
@@ -448,7 +447,6 @@ Best regards,
 Business Helper Team
 +92 300 1234567
 """,
-            
             "follow_up": """
 Subject: Following Up: AI Solutions for {company_name}
 
@@ -456,7 +454,7 @@ Hi {contact_name},
 
 Just checking if you had a chance to review our AI business solutions for {company_name}.
 
-We're currently offering a special 30% discount for early adopters, plus a free consultation worth $500.
+We're currently offering a special 30 percent discount for early adopters, plus a free consultation worth $500.
 
 Quick demo link: https://calendly.com/business-helper/demo
 
@@ -465,25 +463,23 @@ Looking forward to connecting!
 Best,
 Business Helper Team
 """,
-            
             "partnership": """
-Subject: Strategic Partnership Opportunity - Business Helper × {company_name}
+Subject: Strategic Partnership Opportunity - Business Helper x {company_name}
 
 Dear {contact_name},
 
 I see tremendous potential for a strategic partnership between Business Helper and {company_name}.
 
 Our combined strengths could:
-• Access 50,000+ businesses globally
-• Share technology and resources
-• Create integrated solutions for clients
+- Access 50,000+ businesses globally
+- Share technology and resources
+- Create integrated solutions for clients
 
 Let's schedule a call to explore this opportunity.
 
 Warm regards,
 Business Helper Partnership Team
 """,
-            
             "newsletter": """
 Subject: Weekly Business Insights + Special Offer for {company_name}
 
@@ -491,11 +487,11 @@ Hello {contact_name},
 
 This week's top business trends:
 
-📊 AI market grew 45% in Q1 2025
-💼 Remote jobs increased 60% worldwide
-🚀 Top 10 business automation tools
+- AI market grew 45 percent in Q1 2025
+- Remote jobs increased 60 percent worldwide
+- Top 10 business automation tools
 
-Special offer: Get 50% off on our Pro plan - Only this week!
+Special offer: Get 50 percent off on our Pro plan - Only this week!
 
 Claim offer: bit.ly/business-helper-offer
 
@@ -547,7 +543,7 @@ def fetch_real_jobs(job_title, country):
                     'company': job.get('company', {}).get('display_name', 'Unknown'),
                     'location': job.get('location', {}).get('display_name', 'Remote'),
                     'salary': f"{job.get('salary_min', 'N/A')} - {job.get('salary_max', 'N/A')}",
-                    'description': job.get('description', '')[:300] + '...',
+                    'description': str(job.get('description', ''))[:300] + '...',
                     'url': job.get('redirect_url', '#')
                 })
             return jobs
@@ -629,4 +625,6 @@ def show_admin_dashboard():
             <h2>{stats['total_users']}</h2>
             <p>Total Users</p>
         </div>
-        """), unsafe_all
+        """, unsafe_allow_html=True)
+    
+    with col2:
